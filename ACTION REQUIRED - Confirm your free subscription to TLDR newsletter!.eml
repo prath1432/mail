@@ -1,0 +1,135 @@
+Delivered-To: prathmeshsalunke758@gmail.com
+Received: by 2002:a05:6a11:fb22:b0:5e9:3c43:c908 with SMTP id id34csp4031680pxc;
+        Fri, 25 Apr 2025 01:30:27 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IEvZBwZ2MOPgXk9u73lIw19P6JSBLWspaJy9dJDUr/6mjT0oOjzIaDY0iapYFLQjzIyWI4r
+X-Received: by 2002:a05:620a:288d:b0:7c5:d1b3:d9b with SMTP id af79cd13be357-7c9606af90amr227265585a.10.1745569827654;
+        Fri, 25 Apr 2025 01:30:27 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1745569827; cv=none;
+        d=google.com; s=arc-20240605;
+        b=iIFpEPM5fJMWtUhR+VGSJ8Q86ufLOTfMbDan41uG0f7gayAzcWo/tjsGzHIgTMrdiM
+         wTY3FiwCD1lPUo6bf1st/cnSQfz1cSS/M5kzND72ff/n/S+5hPr8IpAc+yK2wMig9wZS
+         rGLy0inLoHryAFgiU6AjeQldc+P8Q1Pk+6Q45zSmUARG0/I+bZRaP66WPcBTqhNArib6
+         O0N6CQrDra15Bv4A/jlqEd3pex4IRnJDLhA3Lcof8/L/K5V+YewxRjlB7NUhadkCPaP1
+         Vinu593ybZWbm4RuIxKmd4iLCXLp/r4hFYbAWqIz3fVjVi/5Ml4AqgjhnOsQKDa3R1aZ
+         zK0Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=content-transfer-encoding:mime-version:feedback-id:to:message-id
+         :subject:date:from:dkim-signature:dkim-signature;
+        bh=kcTyh5XXbmx0vCEQ1zQ5nq322Ift9ySF9//hd1ML+D0=;
+        fh=ZYDcQo/Jnlj6HYdUzUiRriwLmyJe6KeKHcDUmMEK+v4=;
+        b=eUxkqEY4f5xJhobroxHzgFWI+67nC1xDS9FbdGDspFSC76oa36vU5TEthCPDKW3Gwf
+         GESGoFRNCaZmlSWKCWbTVPMwO5M6AWqW0eWH9KSSVG4ZF2qAeMhrFBA4Y6yVkWSPasg4
+         YkK5zLE9QbAb78Dw7iVjP1L/uXOtKKfRjXMCOqa52/Jeb5T1i3deHiLxoCaLj3ALXp5w
+         trH9Jvi9E9tPDaI+7lBQknuaf7QFl5B0HZH/8/aVomHUVBRd7EpqX/1knP8sLn5pX+63
+         eHdas0SFmN7k52OVb35QjWsvTqykGppa1bAehgHue+vgk4NGhPQdYj+3hqVF5VzACHOD
+         Bp6A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@pm.mtasv.net header.s=pm20250324 header.b=hshaF5K6;
+       dkim=pass header.i=@tldrnewsletter.com header.s=20220225222136pm header.b="p8W/EsjP";
+       spf=pass (google.com: domain of pm_bounces@pm-bounces.tldrnewsletter.com designates 104.245.209.212 as permitted sender) smtp.mailfrom=pm_bounces@pm-bounces.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+Return-Path: <pm_bounces@pm-bounces.tldrnewsletter.com>
+Received: from mta212a-ord.mtasv.net (mta212a-ord.mtasv.net. [104.245.209.212])
+        by mx.google.com with ESMTPS id d75a77b69052e-47e9f3bf477si36345381cf.88.2025.04.25.01.30.27
+        for <prathmeshsalunke758@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 25 Apr 2025 01:30:27 -0700 (PDT)
+Received-SPF: pass (google.com: domain of pm_bounces@pm-bounces.tldrnewsletter.com designates 104.245.209.212 as permitted sender) client-ip=104.245.209.212;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@pm.mtasv.net header.s=pm20250324 header.b=hshaF5K6;
+       dkim=pass header.i=@tldrnewsletter.com header.s=20220225222136pm header.b="p8W/EsjP";
+       spf=pass (google.com: domain of pm_bounces@pm-bounces.tldrnewsletter.com designates 104.245.209.212 as permitted sender) smtp.mailfrom=pm_bounces@pm-bounces.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=pm20250324; d=pm.mtasv.net;
+ h=From:Date:Subject:Message-Id:To:Feedback-ID:MIME-Version:Content-Type:
+ Content-Transfer-Encoding:Date:From:Message-ID:Reply-To:Sender:Subject:To:CC;
+ t=1745569827; x=1745656227;
+ bh=kcTyh5XXbmx0vCEQ1zQ5nq322Ift9ySF9//hd1ML+D0=;
+ b=hshaF5K6/gVGwf8KYExvZr8mD6nQ3YrqJZ21AeuhHXLGDWJNrvEQ9Z/QCNMH17oKFODgOMrJPGUf
+   1VJ6ZLbyZz52Z5IMEVCVmZxys+0ct4WnH0VKmX9F6EW8ieftBUvHuwZZOqVAFAe5RXKpBta0XQFV
+   dcQm0Ii/DUicSXYw/fUdLdLqdlhoEn1B0Y2i1rhsihtL9fNZ922Eygg47PQCoHj/48iJRZ5u6CBY
+   bXWzweflOv9TI//xnQqe7SXoyYy8onehzd/iRiYknFrZsSJVQbgmsGkYqszSHm4lQRo/MwY4uCAY
+   ADfZde1LPHHfeH9r7gENbkGk4lP1JRHrr0QKOA==
+Received: by mta212a-ord.mtasv.net id h1d4263864oc for <prathmeshsalunke758@gmail.com>; Fri, 25 Apr 2025 04:30:27 -0400 (envelope-from <pm_bounces@pm-bounces.tldrnewsletter.com>)
+X-PM-IP: 104.245.209.212
+X-IADB-IP: 104.245.209.212
+X-IADB-IP-REVERSE: 212.209.245.104
+DKIM-Signature: v=1; a=rsa-sha256; d=tldrnewsletter.com; s=20220225222136pm;
+	c=relaxed/relaxed; i=dan@tldrnewsletter.com; t=1745569827; x=1745742627;
+	h=date:date:from:from:message-id:reply-to:sender:subject:subject:to:to:cc:
+	feedback-id:mime-version:content-type:content-transfer-encoding;
+	bh=kcTyh5XXbmx0vCEQ1zQ5nq322Ift9ySF9//hd1ML+D0=;
+	b=p8W/EsjPfZPFL7wYtZxN9DVF8AsD29kwwo7ltzQs+ztJ2Fz72WBFvM4R9kkz7W3Ti6eFXTV00fw
+	heXpd0fadJEg5fdMljYh8b9ETNcM2o8b5N2UGbREntfOxRaed6Q0ibi2rdAFBQ4ZS3o8ZGmuSMXQ1
+	TQqtt8HG0ZHBhJFwJhY=
+From: TLDR <dan@tldrnewsletter.com>
+Date: Fri, 25 Apr 2025 08:30:27 +0000
+Subject: ACTION REQUIRED - Confirm your free subscription to TLDR newsletter!
+Message-Id: <a8cbd440-29da-4fe4-821f-7a19e168f02a@mtasv.net>
+To: prathmeshsalunke758@gmail.com
+Feedback-ID: s11984158-d2VsY29tZS1zcGFya2xvb3A=:s11984158:a229502:postmark
+X-Complaints-To: abuse@postmarkapp.com
+X-PM-Message-Id: a8cbd440-29da-4fe4-821f-7a19e168f02a
+X-PM-Tag: welcome-sparkloop
+X-PM-RCPT: |bTB8MjI5NTAyfDExOTg0MTU4fHByYXRobWVzaHNhbHVua2U3NThAZ21haWwuY29t|
+X-PM-Message-Options: v1;1.cF0IfcK8O3fBvFKHHZ5EQg.X3rq6Zv1DlBTAa9MGOZ5DGb_a8jfqY5J4cEpLmimZ_p2tlmtbxyQptXk88P5Tou4H4C4sIuQE8CcEM5KL9wR1BSnpCwtaEbS9txJMxdWYsdstAXPs--B4nxu4VlCPFAa6KSb1K7_Z8yNtKMz8rwCwjtUjifEdBrVOemsvSwspX1ORxuviZx0waR1WlkcFYkf
+MIME-Version: 1.0
+X-PM-MTA-Pool: transactional-2
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html>
+    <head>
+      <title>Confirm your referral to TLDR newsletter!</title>
+    </head>
+    <body>
+    <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" style=3D"font=
+-family: Arial, Helvetica, sans-serif; max-width: 700px; margin: 0 auto; pa=
+dding: 15px;">
+        <tr>
+            <td>
+              <p style=3D"font-size: 16px;">Thanks for signing up for the T=
+LDR Newsletter!
+              </p>
+              <p style=3D"font-size: 16px;">If you'd like to join 1.25 mill=
+ion subscribers who receive our free newsletter with links and TLDRs of the=
+ most interesting stories in tech, please click below:</p>
+            </td>
+        </tr>
+        <tr>
+          <td align=3D"center" style=3D"border-radius: 5px;">
+              <a href=3Dhttps://click.pstmrk.it/3s/tldr.tech%2Fapi%2Fsubscr=
+ibe%2Ftech%2Fconfirm%2F%3Femail%3Dprathmeshsalunke758%2540gmail.com/Ht22/-_=
+i8AQ/AQ/a8cbd440-29da-4fe4-821f-7a19e168f02a/1/3uCqETQzKL style=3D"display:=
+ inline-block; padding: 10px 20px; margin: 10px 0; font-size: 16px; color: =
+#ffffff; background-color: #581C87; text-decoration: none; border-radius: 5=
+px;">Confirm Subscription</a>
+          </td>
+        <tr>
+            <td>
+              <p style=3D"font-size: 16px;">If you do not want to receive T=
+LDR, just ignore this email.</p>
+            </td>=20
+        </tr>
+        <tr>
+            <td>
+              <p style=3D"font-size: 16px;">Cheers,</p>
+              <p style=3D"font-size: 16px;">Dan Ni, Founder of TLDR</p>
+            </td>
+        </tr>
+    </table>
+		</div>
+	<img src=3D"https://ea.pstmrk.it/open?m=3Dv3_1.rmU9MCx2PWBl8bsDK1P0lw.Cp2g=
+NcC4uC9lHxfqzOIcxpsukKRxoQPGJOzOUbBOj5U6rlF4nkN1XtJZHuMlvNap5ISw4ec3Bz3sSk4=
+G53LCXkD7clyezaP2d3xnwc9Z9F66QE-PayhGQTYZAcJjgWXX9P1Me5xS39GawkbKKf5C7DCra_=
+noh3xKMpkZ-PniTDqtwS7r17VUB-vMTaBRsTSguHO2fLIJ-4KEBU_uJ6EK8pPNs3B4OYsBr3rCp=
+uc7kyPe6Zxv9px0bFXjam1vJliwfgn6cWvY6MU3DQ5MwnmrOPZLL3Xu-oalc_NMAnE-sVLx8xh8=
+STj6FomYz0-FzAGpAcOJSsh1j62lXJHerbyWzJSLkVidomr1z1kzlluskbGVA7ksIHlmYWMOhwL=
+C-DLvvSnBbWdqO5JNDGQpV2g98r5GgwdkpqVrrHa8ukddjOn57e0MK4r11ksZ_M6uasJilVAaLY=
+KZGPMeXS6T6RvFlgQZvorD2hO4TIdXRj_IZablYSrpjLYrIoaZGaVaI8qYa7g9UKLitheF4wz6X=
+H4kpVHIJB6txY1lKTYAP6wZxistNQ_6q_RL3umGM_MKqOM2" width=3D"1" height=3D"1" b=
+order=3D"0" alt=3D"" /></body>
+</html>=
