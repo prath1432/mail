@@ -1,0 +1,475 @@
+Delivered-To: lifecreator758@gmail.com
+Received: by 2002:a59:ccb1:0:b0:4d5:1857:9321 with SMTP id p17csp1748529vqv;
+        Mon, 16 Jun 2025 00:08:58 -0700 (PDT)
+X-Received: by 2002:a05:651c:f0c:b0:32b:4942:6ae0 with SMTP id 38308e7fff4ca-32b4a6704f9mr8166101fa.41.1750057738542;
+        Mon, 16 Jun 2025 00:08:58 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1750057738; cv=none;
+        d=google.com; s=arc-20240605;
+        b=ErHw4A6QProu0vsliG4ULqY/ONktdVNFPx2XHAnePijpzfjuHVbOU/diMaciL4sk76
+         qkPXWT3mPhBtHnDq1wzgh41XKpVe7mrq9MkDI3UHYNa4+WLZnCfzm+PeGEsznBwExRAB
+         RJFgaZJvEhpZD9axVUHMo8pRDMViVMyG4aGppzqYPwGcRRb0ef+ybOQ2naQHsc1u31Kt
+         BjRCSNhWDh1r3Yz/OuOZTOXg/qCi06dfVvWmGLcpStrbPY8mZON/3RdlYlj0SNqQSoEH
+         HKMQ3XMdoUV/AchJbEO1NqorK3Fivs5p/1ZA6MV2SKCT+35zBucyDOEwwlME3Tk7enop
+         UUnw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=0idWaiyuPJFnwP/NchSluOy1hMbWjqT0gfAchbcPM7s=;
+        fh=X/8jt7avXcd2dU6n81pprvYKGC4KWwsksfpq8/dkz8o=;
+        b=Yv1pGtMbUJiLNUoG+9DDdGGhFgB00ReAFkS45Xhjc8F3k8u4+pzNXiINxGDG+vUINk
+         Lyb0qoVKvUeuUjhLCcrRclmd6+j+iR3S28jj+WWhpJQBJQfYm/MpKgFIaHg515A0VMN1
+         obFBq/d+HFats0eGv29hUvKmKBvPQKu4XKn61+6xgGYRp2tYQhV0Lc/I6rl2W5YC7uLb
+         OKGya2qliV20OFtwfm3Y2IgDpQodiNwTas0+nqYGJEqhnJp05sHvgU/sI5//hi+fanPN
+         Z8cYNbWw7nUJmRMxmGtu7uIByKp0UDao2gtvAv9fp0Qij7y+kOnI5GWwCMucAXwZQAYd
+         5gEA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="ZKz/3q43";
+       spf=pass (google.com: domain of pzarad2@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=pzarad2@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <pzarad2@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 38308e7fff4ca-32b3300d06asor15749471fa.3.2025.06.16.00.08.58
+        for <lifecreator758@gmail.com>
+        (Google Transport Security);
+        Mon, 16 Jun 2025 00:08:58 -0700 (PDT)
+Received-SPF: pass (google.com: domain of pzarad2@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="ZKz/3q43";
+       spf=pass (google.com: domain of pzarad2@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=pzarad2@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1750057737; x=1750662537; dara=google.com;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=0idWaiyuPJFnwP/NchSluOy1hMbWjqT0gfAchbcPM7s=;
+        b=ZKz/3q43BQxbKaZEF7Znm0JSNpK/CNdBsnPPXxwHnLs8YuGLmdbKlLfRfpcYJJlvSP
+         M2z1K3REeY4xL23AdK932xq/Amv/D5uuBcVAcQO6J8W/LLeggQ+7bITnd+rTuXRgECxd
+         eZgcZdAFCo1BdpI051WTlyw7Q/U96o26N4d0FNVLAr9ybQF5q7KyPP/MJjaUnqCCMHEF
+         4mZXlcvuRhSQfUtNqRZU0E+u0YzG8laXY+w9NR1sc+0+tsqBczR0N/PxVNBFXYJqgbN2
+         jHUva8qwa1Kivey1m9QbxOpO9crRT3mdjgBf4KPjs7Tx0MZw/Z+zZW0lAEtXl7+yHc4o
+         6WSg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1750057737; x=1750662537;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=0idWaiyuPJFnwP/NchSluOy1hMbWjqT0gfAchbcPM7s=;
+        b=ZQJMJ8i6iDoXhaB+/gAvjk5XnO/fuO92bn4Czh5hekbyuqMvpe33MrmAThWCOZ4ilf
+         mU2HQ1fLAxFF1x1zuzjyWOgMXZejD9alCEcgPIO36itAudTiaPPpJf5ylTZ4F3LSGbtf
+         laLj12qPKTZIvHblH40tEyRLRb5SHdtNsa7ANd8wzaMd9HkvtnGo+ASnDLGSSzDdsk2e
+         ZzCCreXODCDNyZyhE1yolLBSszH8zsRpBGhHqDtIaVSq+DOcwHnCaUjo2z0DbnIH5+uo
+         gFARGxb45JTOmLKyHhFg1GNK1qNm/MDo69aNAFGbIZRHd2LmPJc/JdcaUuNg+k7uiB09
+         Fzbw==
+X-Gm-Message-State: AOJu0Yx7zlEUVHfXtLEIa0rIKZthAvTgn9XTtNTEYfrUBoeE9VBbO830
+	7FZs2SgME85YiDTBOeD84vH/VGowAeGHMz30vpNkDgnTVA5jQYsHMYO5o0aCuBQEmXXRqTPWhSk
+	73Rjm3tSdeK1CYS81+FUUybc7SsEgqK0rSg==
+X-Gm-Gg: ASbGncuRLg5bLcRSecVpPgGI3MJt12abEqNA5snWICAjFGI5CqnO9HWWnxWbPvByVor
+	HtLzwiwsWBzO7hiG2amtGAIbUk8B0TiiB+4D2CjMY3SmilU94b3S2arNDeKvOczIQbFgta3UfMJ
+	vsANdcZ2cpcRe1cykCSmTWrTKeHhBW04Yq7nR9Hf3l4+1zaCwYY+nTs+/N4mQUSax6vtrQYwT+K
+	PgtlA==
+X-Google-Smtp-Source: AGHT+IE9VZTHgPrtSNuuL2yVVdKanGXnd8GiQ0aHGpddLvVgws3VZeE7QDcuCmOmO9tzof61XAmyq2nqxjwBHxJnvxg=
+X-Received: by 2002:a2e:a984:0:b0:32a:6aa0:217b with SMTP id
+ 38308e7fff4ca-32b4a6dc1c1mr24169331fa.25.1750057737226; Mon, 16 Jun 2025
+ 00:08:57 -0700 (PDT)
+MIME-Version: 1.0
+References: <azGpm5-lRBxP0r-3WCCNi@sendersrv.com>
+In-Reply-To: <azGpm5-lRBxP0r-3WCCNi@sendersrv.com>
+From: Prasad Zarad <pzarad2@gmail.com>
+Date: Mon, 16 Jun 2025 12:38:45 +0530
+X-Gm-Features: AX0GCFsKSIDTQM0hzE8k1OaLNSH0OUaQAGSka_3atUJONdouQEFueZ5hsxGNieQ
+Message-ID: <CABLG2KQh4RTxEjmQJzzg7VskeE5T9O9zhQ3O=NUu-jsR-zwoyw@mail.gmail.com>
+Subject: Fwd: Dear Prasad Zarad, Team Velena IT Networks LLC Welcomes You
+ Onboard - Provisional Offer Letter Attached
+To: lifecreator758@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000c38e6f0637ab112c"
+
+--000000000000c38e6f0637ab112c
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+---------- Forwarded message ---------
+From: Velena Networks <info@velenaitnetworks.com>
+Date: Mon, 16 Jun 2025 at 11:28
+Subject: Dear Prasad Zarad, Team Velena IT Networks LLC Welcomes You
+Onboard - Provisional Offer Letter Attached
+To: <pzarad2@gmail.com>
+
+
+Dear Prasad Zarad, Team Velena IT Networks LLC Welcomes You Onboard -
+Provisional Offer Letter Attached
+=CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=
+=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=
+=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=
+=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=
+=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C
+=CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=
+=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=
+=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=
+=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=
+=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C
+=CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=
+=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=
+=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=
+=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=
+=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C
+=CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=
+=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C
+<https://campaign-statistics.com/b/c/azGpm5-lRBxP0r-3WCCNi>
+Is this email not displaying correctly? View it in your browser.
+<https://campaign-statistics.com/browser_preview/azGpm5-lRBxP0r-3WCCNi>
+
+Onboarding Formalities
+
+Dear Prasad Zarad,
+
+=EF=BB=BF
+
+We are excited to inform you that you have been *selected* for the
+role of *Python
+Developer* at *Velena IT Networks LLC.* After a thorough evaluation, we
+believe that you will be a valuable addition to our team. Congratulations
+on this fantastic opportunity!
+
+=EF=BB=BF
+
+Please find attached your provisional offer letter, which outlines your
+role, responsibilities, and compensation package.
+
+=EF=BB=BF
+Next Steps:
+
+   1. *Apply for PCAP E-Certification*
+   As a non-U.S. citizen, the *Certified Associate Python Programmer (PCAP)=
+*
+   certification is required for this role, especially for working with
+   California-based tech startups. Please ensure you apply for your PCAP
+   license key as soon as possible. A separate email with detailed
+   instructions on the application process will be sent to you shortly.
+   2. *Submit Documents for Verification*
+   We have partnered with a *third-party verification firm* to verify your
+   documents. You will receive a follow-up email with the list of required
+   documents and instructions on how to submit them. Please submit the
+   documents promptly to ensure a smooth verification process and avoid any
+   delays in onboarding.
+   3. *Fill Work from Home Infrastructure Form*
+   To ensure you are fully equipped for remote work, please complete the *W=
+ork
+   from Home Infrastructure Form* at your earliest convenience. This will
+   enable us to ship your company-provided laptop and any additional equipm=
+ent
+   to your location. You will receive the form and further instructions
+   shortly.
+   4. *Confirm Acceptance*
+   To proceed with the offer, please reply to this email with *"I accept"*
+   within *2 days* of receiving this offer letter. If we do not receive
+   your confirmation within this timeframe, the provisional offer will be
+   cancelled.
+
+
+Use the following link to proceed further.
+
+=EF=BB=BF
+Download Offer Letter PDF
+<https://campaign-statistics.com/link_click/azGpm5-lRBxP0r-3WCCNi/fee50e2b0=
+2f8036bba36b205763d3a59>
+Orientation and Virtual Office Tour:
+
+=EF=BB=BF
+
+Once the onboarding formalities are completed and the document verification
+is done, we will organize an *orientation session*. This session will
+include a *virtual tour of our office*, where you will be introduced to our
+workspace, tools, and team culture. The orientation will equip you with
+everything you need to get started in your new role.
+
+=EF=BB=BF
+
+We are excited to welcome you to our team and look forward to your
+contributions. If you have any questions regarding the offer, feel free to
+reach out at at Alex.hr@velenaitnetworks.com
+
+=EF=BB=BF
+
+Once again, congratulations, and we look forward to working with you!
+
+=EF=BB=BF
+
+Regards
+
+=EF=BB=BF
+
+Alexander Matthews
+
+Global Head of Talent Acquisition
+
+Velena IT Networks LLC
+
+
+*For Feedback or Questions*Have questions or comments? Send them to:
+alex.hr@velenaitnetworks.com
+If you would like to unsubscribe, please click here.
+<https://campaign-statistics.com/unsubscribe/azGpm5-lRBxP0r-3WCCNi>
+
+--000000000000c38e6f0637ab112c
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><br><div class=3D"gmail_quote gmail_quote_container"><=
+div dir=3D"ltr" class=3D"gmail_attr">---------- Forwarded message ---------=
+<br>From: <strong class=3D"gmail_sendername" dir=3D"auto">Velena Networks</=
+strong> <span dir=3D"auto">&lt;<a href=3D"mailto:info@velenaitnetworks.com"=
+>info@velenaitnetworks.com</a>&gt;</span><br>Date: Mon, 16 Jun 2025 at 11:2=
+8<br>Subject: Dear Prasad Zarad, Team Velena IT Networks LLC Welcomes You O=
+nboard - Provisional Offer Letter Attached<br>To:  &lt;<a href=3D"mailto:pz=
+arad2@gmail.com">pzarad2@gmail.com</a>&gt;<br></div><br><br><div class=3D"m=
+sg8412858134232498672"><div width=3D"100%" class=3D"m_8412858134232498672bo=
+dy" style=3D"margin:0px;padding:0px!important;background-color:rgb(242,242,=
+242)"><div aria-hidden=3D"true" style=3D"display:none;font-size:1px;line-he=
+ight:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;font-family=
+:sans-serif">Dear Prasad Zarad, Team Velena IT Networks LLC Welcomes You On=
+board - Provisional Offer Letter Attached</div><div style=3D"display:none;m=
+ax-height:0px;max-width:0px;opacity:0;overflow:hidden">=CD=8F=E2=80=8C=C2=
+=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=
+=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=
+=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=
+=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=
+=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=
+=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=
+=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=
+=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=
+=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=
+=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=
+=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=
+=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=
+=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=
+=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=
+=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=
+=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=
+=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=
+=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=
+=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=
+=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=
+=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=A0=CD=8F=E2=80=8C=C2=
+=A0</div><div style=3D"display:none;font-size:1px;line-height:1px;max-heigh=
+t:0px;max-width:0px;opacity:0;overflow:hidden;font-family:sans-serif"></div=
+><a href=3D"https://campaign-statistics.com/b/c/azGpm5-lRBxP0r-3WCCNi" targ=
+et=3D"_blank"><img src=3D"https://campaign-statistics.com/email_open/azGpm5=
+-lRBxP0r-3WCCNi" width=3D"1" height=3D"1" border=3D"0" alt=3D"" style=3D"he=
+ight:1px!important;width:1px!important;border-width:0!important;margin-top:=
+0!important;margin-bottom:0!important;margin-right:0!important;margin-left:=
+0!important;padding-top:0!important;padding-bottom:0!important;padding-righ=
+t:0!important;padding-left:0!important;outline-style:none;text-decoration:n=
+one;display:block"></a><center lang=3D"en" style=3D"width:100%;background-c=
+olor:rgb(242,242,242)"><div class=3D"m_8412858134232498672e-c" style=3D"max=
+-width:640px;margin:0px auto"><table align=3D"center" cellspacing=3D"0" cel=
+lpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin:auto"><tbody><tr=
+><td style=3D"padding:20px 10px;text-align:center"><a href=3D"https://campa=
+ign-statistics.com/browser_preview/azGpm5-lRBxP0r-3WCCNi" style=3D"font-siz=
+e:12px;font-family:Arial,&quot;Helvetica Neue&quot;,Helvetica,sans-serif;co=
+lor:rgb(242,242,242)" target=3D"_blank">Is this email not displaying correc=
+tly? View it in your browser.</a></td></tr></tbody></table></div><table ali=
+gn=3D"center" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100=
+%" class=3D"m_8412858134232498672e-c m_8412858134232498672sect-d2Gsyx"><tbo=
+dy><tr><td bgcolor=3D"transparent" style=3D"background-color:transparent"><=
+div class=3D"m_8412858134232498672e-c" style=3D"max-width:640px;margin:0px =
+auto"><table align=3D"center" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0" width=3D"640" style=3D"max-width:100%;width:100%"><tbody><tr><td bgcolo=
+r=3D"#ffffff" width=3D"100%" style=3D"border-radius:0px;background-color:rg=
+b(255,255,255);width:100%"><div style=3D"font-size:0px;line-height:0"><tabl=
+e style=3D"border-spacing:0px"><tbody><tr><td class=3D"m_841285813423249867=
+2s-sp_l" width=3D"35" style=3D"padding-left:35px;padding-right:0px"></td><t=
+d class=3D"m_8412858134232498672s-sp" width=3D"100%" style=3D"padding:10px =
+0px"><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%"=
+><tbody><tr><td align=3D"center" valign=3D"top" style=3D"font-size:0px;padd=
+ing:0px"><div class=3D"m_8412858134232498672st-c" style=3D"display:inline-t=
+able;padding-left:0px;padding-right:0px;min-height:950px;background-color:t=
+ransparent;box-sizing:border-box;margin:0px;vertical-align:top;max-width:57=
+0px;min-width:160px;width:100%"><div class=3D"m_8412858134232498672mb-db" s=
+tyle=3D"display:table-cell;vertical-align:top"><div class=3D"m_841285813423=
+2498672st-ci"><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=
+=3D"100%"><tbody><tr><td style=3D"padding:0px;font-size:16px;line-height:no=
+rmal"><table align=3D"center" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0" width=3D"100%" style=3D"padding:0px"><tbody><tr><td align=3D"left" clas=
+s=3D"m_8412858134232498672i-tltd" bgcolor=3D"transparent" style=3D"padding:=
+5px 0px;direction:ltr;font-family:Arial,&quot;Helvetica Neue&quot;,Helvetic=
+a,sans-serif;color:rgb(52,49,63);font-size:35px;text-align:center;font-weig=
+ht:bold;font-style:normal;text-decoration:none;line-height:120%"><div><div>=
+<p>Onboarding Formalities<br><strong></strong></p></div></div></td></tr></t=
+body></table></td></tr></tbody></table><table cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" width=3D"100%"><tbody><tr><td style=3D"padding:0px;font=
+-size:16px;line-height:normal"><table align=3D"center" cellspacing=3D"0" ce=
+llpadding=3D"0" border=3D"0" width=3D"100%" style=3D"padding:0px"><tbody><t=
+r><td align=3D"left" class=3D"m_8412858134232498672i-tltd" bgcolor=3D"trans=
+parent" style=3D"padding:10px 0px;direction:ltr;font-family:Arial,&quot;Hel=
+vetica Neue&quot;,Helvetica,sans-serif;color:rgb(115,115,115);font-size:14p=
+x;text-align:left;line-height:170%"><div><div><p>Dear Prasad Zarad,</p><p>=
+=EF=BB=BF</p><p>We are excited to inform you that you have been <strong>sel=
+ected</strong> for the role of <strong>Python Developer</strong>=C2=A0at <s=
+trong>Velena IT Networks LLC.</strong>=C2=A0After a thorough evaluation, we=
+ believe that you will be a valuable addition to our team. Congratulations =
+on this fantastic opportunity!</p><p>=EF=BB=BF</p><p>Please find attached y=
+our provisional offer letter, which outlines your role, responsibilities, a=
+nd compensation package.</p><p>=EF=BB=BF</p><h3 style=3D"margin:0px">Next S=
+teps:</h3><ol><li><strong>Apply for PCAP E-Certification</strong><br>As a n=
+on-U.S. citizen, the <strong>Certified Associate Python Programmer (PCAP)</=
+strong> certification is required for this role, especially for working wit=
+h California-based tech startups. Please ensure you apply for your PCAP lic=
+ense key as soon as possible. A separate email with detailed instructions o=
+n the application process will be sent to you shortly.</li><li><strong>Subm=
+it Documents for Verification</strong><br>We have partnered with a <strong>=
+third-party verification firm</strong> to verify your documents. You will r=
+eceive a follow-up email with the list of required documents and instructio=
+ns on how to submit them. Please submit the documents promptly to ensure a =
+smooth verification process and avoid any delays in onboarding.</li><li><st=
+rong>Fill Work from Home Infrastructure Form</strong><br>To ensure you are =
+fully equipped for remote work, please complete the <strong>Work from Home =
+Infrastructure Form</strong> at your earliest convenience. This will enable=
+ us to ship your company-provided laptop and any additional equipment to yo=
+ur location. You will receive the form and further instructions shortly.</l=
+i><li><strong>Confirm Acceptance</strong><br>To proceed with the offer, ple=
+ase reply to this email with <strong>&quot;I accept&quot;</strong> within <=
+strong>2 days</strong> of receiving this offer letter. If we do not receive=
+ your confirmation within this timeframe, the provisional offer will be can=
+celled.</li></ol><h3 style=3D"margin:0px"><br></h3><p>Use the following lin=
+k to proceed further.</p><p>=EF=BB=BF</p></div></div></td></tr></tbody></ta=
+ble></td></tr></tbody></table><table cellspacing=3D"0" cellpadding=3D"0" bo=
+rder=3D"0" width=3D"100%"><tbody><tr><td style=3D"padding:0px;font-size:16p=
+x;line-height:normal"><table align=3D"center" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" width=3D"100%" style=3D"padding:0px"><tbody><tr><td bgc=
+olor=3D"transparent" class=3D"m_8412858134232498672i-tltd" style=3D"padding=
+:10px 0px;text-align:center"><table width=3D"auto" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" class=3D"m_8412858134232498672btn-wr_t" align=3D"c=
+enter" style=3D"border-collapse:separate!important"><tbody><tr><th valign=
+=3D"middle" align=3D"center" dir=3D"ltr" style=3D"vertical-align:middle;bor=
+der:none;margin:0px;padding:0px;border-radius:5px;background-color:rgb(128,=
+149,255)"><a valign=3D"middle" align=3D"center" href=3D"https://campaign-st=
+atistics.com/link_click/azGpm5-lRBxP0r-3WCCNi/fee50e2b02f8036bba36b205763d3=
+a59" style=3D"text-align:center;text-decoration:none;line-height:13px;borde=
+r-radius:5px;display:inline-block;width:auto" rel=3D"fee50e2b02f8036bba36b2=
+05763d3a59" target=3D"_blank"><span style=3D"padding-left:16px;padding-righ=
+t:16px;border-top:16px solid transparent;border-bottom:16px solid transpare=
+nt;font-size:13px;font-family:Arial,&quot;Helvetica Neue&quot;,Helvetica,sa=
+ns-serif;color:rgb(255,255,255);text-decoration:none;font-weight:normal;fon=
+t-style:normal;display:block">Download Offer Letter PDF</span></a></th></tr=
+></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div>=
+</div></div></td></tr></tbody></table></td><td class=3D"m_84128581342324986=
+72s-sp_r" width=3D"35" style=3D"padding-left:35px;padding-right:0px"></td><=
+/tr></tbody></table></div></td></tr></tbody></table></div></td></tr></tbody=
+></table><table align=3D"center" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" width=3D"100%" class=3D"m_8412858134232498672e-c m_84128581342324986=
+72sect-yyb8Dw"><tbody><tr><td bgcolor=3D"transparent" style=3D"background-c=
+olor:transparent"><div class=3D"m_8412858134232498672e-c" style=3D"max-widt=
+h:640px;margin:0px auto"><table align=3D"center" cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0" width=3D"640" style=3D"max-width:100%;width:100%"><t=
+body><tr><td bgcolor=3D"#ffffff" width=3D"100%" style=3D"border-radius:0px;=
+background-color:rgb(255,255,255);width:100%"><div style=3D"font-size:0px;l=
+ine-height:0"><table style=3D"border-spacing:0px"><tbody><tr><td class=3D"m=
+_8412858134232498672s-sp_l" width=3D"35" style=3D"padding-left:35px;padding=
+-right:0px"></td><td class=3D"m_8412858134232498672s-sp" width=3D"100%" sty=
+le=3D"padding:10px 0px"><table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" width=3D"100%"><tbody><tr><td align=3D"center" valign=3D"top" style=
+=3D"font-size:0px;padding:0px"><div class=3D"m_8412858134232498672st-c" sty=
+le=3D"display:inline-table;padding-left:0px;padding-right:0px;min-height:44=
+8px;background-color:transparent;box-sizing:border-box;margin:0px;vertical-=
+align:top;max-width:570px;min-width:160px;width:100%"><div class=3D"m_84128=
+58134232498672mb-db" style=3D"display:table-cell;vertical-align:top"><div c=
+lass=3D"m_8412858134232498672st-ci"><table cellspacing=3D"0" cellpadding=3D=
+"0" border=3D"0" width=3D"100%"><tbody><tr><td style=3D"padding:0px;font-si=
+ze:16px;line-height:normal"><table align=3D"center" cellspacing=3D"0" cellp=
+adding=3D"0" border=3D"0" width=3D"100%" style=3D"padding:0px"><tbody><tr><=
+td align=3D"left" class=3D"m_8412858134232498672i-tltd" bgcolor=3D"transpar=
+ent" style=3D"padding:10px 0px;direction:ltr;font-family:Arial,&quot;Helvet=
+ica Neue&quot;,Helvetica,sans-serif;color:rgb(115,115,115);font-size:14px;t=
+ext-align:left;line-height:170%"><div><div><h3 style=3D"margin:0px">Orienta=
+tion and Virtual Office Tour:</h3><p>=EF=BB=BF</p><p>Once the onboarding fo=
+rmalities are completed and the document verification is done, we will orga=
+nize an <strong>orientation session</strong>. This session will include a <=
+strong>virtual tour of our office</strong>, where you will be introduced to=
+ our workspace, tools, and team culture. The orientation will equip you wit=
+h everything you need to get started in your new role.</p><p>=EF=BB=BF</p><=
+p>We are excited to welcome you to our team and look forward to your contri=
+butions. If you have any questions regarding the offer, feel free to reach =
+out at=C2=A0at <a href=3D"mailto:Alex.hr@velenaitnetworks.com" target=3D"_b=
+lank">Alex.hr@velenaitnetworks.com</a></p><p>=EF=BB=BF</p><p>Once again, co=
+ngratulations, and we look forward to working with you!<br></p><p>=EF=BB=BF=
+</p><p>Regards</p><p>=EF=BB=BF</p><p>Alexander Matthews</p><p>Global Head o=
+f Talent Acquisition</p><p>Velena IT Networks LLC</p></div></div></td></tr>=
+</tbody></table></td></tr></tbody></table></div></div></div></td></tr></tbo=
+dy></table></td><td class=3D"m_8412858134232498672s-sp_r" width=3D"35" styl=
+e=3D"padding-left:35px;padding-right:0px"></td></tr></tbody></table></div><=
+/td></tr></tbody></table></div></td></tr></tbody></table><table align=3D"ce=
+nter" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" class=
+=3D"m_8412858134232498672e-c m_8412858134232498672sect-jFFJ_m"><tbody><tr><=
+td bgcolor=3D"transparent" style=3D"background-color:transparent"><div clas=
+s=3D"m_8412858134232498672e-c" style=3D"max-width:640px;margin:0px auto"><t=
+able align=3D"center" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" widt=
+h=3D"640" style=3D"max-width:100%;width:100%"><tbody><tr><td bgcolor=3D"#ff=
+ffff" width=3D"100%" style=3D"border-radius:0px;background-color:rgb(255,25=
+5,255);width:100%"><div style=3D"font-size:0px;line-height:0"><table style=
+=3D"border-spacing:0px"><tbody><tr><td class=3D"m_8412858134232498672s-sp_l=
+" width=3D"35" style=3D"padding-left:35px;padding-right:0px"></td><td class=
+=3D"m_8412858134232498672s-sp" width=3D"100%" style=3D"padding:10px 0px 0px=
+"><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%"><t=
+body><tr><td align=3D"center" valign=3D"top" style=3D"font-size:0px;padding=
+:0px"><div class=3D"m_8412858134232498672st-c" style=3D"display:inline-tabl=
+e;padding-left:0px;padding-right:0px;min-height:68px;background-color:trans=
+parent;box-sizing:border-box;margin:0px;vertical-align:top;max-width:570px;=
+min-width:160px;width:100%"><div class=3D"m_8412858134232498672mb-db" style=
+=3D"display:table-cell;vertical-align:top"><div class=3D"m_8412858134232498=
+672st-ci"><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"=
+100%"><tbody><tr><td style=3D"padding:0px;font-size:16px;line-height:normal=
+"><table align=3D"center" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" =
+width=3D"100%" style=3D"padding:0px"><tbody><tr><td align=3D"center" class=
+=3D"m_8412858134232498672i-tltd" bgcolor=3D"transparent" style=3D"padding:1=
+0px 0px;direction:ltr;font-family:Arial,&quot;Helvetica Neue&quot;,Helvetic=
+a,sans-serif;color:rgb(115,115,115);font-size:14px;text-align:center;line-h=
+eight:170%"><div><div><p><strong>For Feedback or Questions<br></strong>Have=
+ questions or comments? Send them to: <a href=3D"mailto:alex.hr@velenaitnet=
+works.com" target=3D"_blank">alex.hr@velenaitnetworks.com</a>=C2=A0<br></p>=
+</div></div></td></tr></tbody></table></td></tr></tbody></table></div></div=
+></div></td></tr></tbody></table></td><td class=3D"m_8412858134232498672s-s=
+p_r" width=3D"35" style=3D"padding-left:35px;padding-right:0px"></td></tr><=
+/tbody></table></div></td></tr></tbody></table></div></td></tr></tbody></ta=
+ble><table align=3D"center" cellspacing=3D"0" cellpadding=3D"0" border=3D"0=
+" width=3D"100%" class=3D"m_8412858134232498672e-c m_8412858134232498672sec=
+t-zIqGIv"><tbody><tr><td bgcolor=3D"transparent" style=3D"background-color:=
+transparent"><div class=3D"m_8412858134232498672e-c" style=3D"max-width:640=
+px;margin:0px auto"><table align=3D"center" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" width=3D"640" style=3D"max-width:100%;width:100%"><tbod=
+y><tr><td bgcolor=3D"#ffffff" width=3D"100%" style=3D"border-radius:0px;bac=
+kground-color:rgb(255,255,255);width:100%"><div style=3D"font-size:0px;line=
+-height:0"><table style=3D"border-spacing:0px"><tbody><tr><td class=3D"m_84=
+12858134232498672s-sp_l" width=3D"35" style=3D"padding-left:35px;padding-ri=
+ght:0px"></td><td class=3D"m_8412858134232498672s-sp" width=3D"100%" style=
+=3D"padding:11px 0px 20px"><table cellspacing=3D"0" cellpadding=3D"0" borde=
+r=3D"0" width=3D"100%"><tbody><tr><td align=3D"center" valign=3D"top" style=
+=3D"font-size:0px;padding:0px"><div class=3D"m_8412858134232498672st-c" sty=
+le=3D"display:inline-table;padding-left:0px;padding-right:0px;min-height:21=
+px;background-color:transparent;box-sizing:border-box;margin:0px;vertical-a=
+lign:top;max-width:570px;min-width:160px;width:100%"><div class=3D"m_841285=
+8134232498672mb-db" style=3D"display:table-cell;vertical-align:top"><div cl=
+ass=3D"m_8412858134232498672st-ci"><table cellspacing=3D"0" cellpadding=3D"=
+0" border=3D"0" width=3D"100%"><tbody><tr><td style=3D"padding:0px;font-siz=
+e:16px;line-height:normal"><table align=3D"center" cellspacing=3D"0" cellpa=
+dding=3D"0" border=3D"0" width=3D"100%" style=3D"padding:0px"><tbody><tr><t=
+d align=3D"center" bgcolor=3D"transparent" style=3D"padding:10px 0px"><tabl=
+e border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%%" style=3D=
+"border-collapse:initial!important"><tbody><tr><td style=3D"background-colo=
+r:transparent;border-top:1px solid rgb(191,191,191)"></td></tr></tbody></ta=
+ble></td></tr></tbody></table></td></tr></tbody></table></div></div></div><=
+/td></tr></tbody></table></td><td class=3D"m_8412858134232498672s-sp_r" wid=
+th=3D"35" style=3D"padding-left:35px;padding-right:0px"></td></tr></tbody><=
+/table></div></td></tr></tbody></table></div></td></tr></tbody></table><div=
+ class=3D"m_8412858134232498672e-c" style=3D"max-width:640px;margin:0px aut=
+o"><table align=3D"center" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"=
+ width=3D"100%" class=3D"m_8412858134232498672e-c" style=3D"margin:auto"><t=
+body><tr><td style=3D"padding:20px 0px;text-align:center"><a href=3D"https:=
+//campaign-statistics.com/unsubscribe/azGpm5-lRBxP0r-3WCCNi" style=3D"font-=
+size:12px;font-family:Arial,&quot;Helvetica Neue&quot;,Helvetica,sans-serif=
+;color:rgb(242,242,242)" target=3D"_blank">If you would like to unsubscribe=
+, please click here.</a></td></tr></tbody></table></div></center></div></di=
+v></div></div>
+
+--000000000000c38e6f0637ab112c--
