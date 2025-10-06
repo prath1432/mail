@@ -1,0 +1,41 @@
+timestamp,sourcetype,from,to,subject,url_in_body,attachment,message_id,sender_ip,verdict
+2025-10-06T06:40:44Z,email:logs,no-reply20@spoofed-bank.com,user20@victimcorp.com,Invoice #3492 attached — immediate action required,http://verify-payments.example.net/login,invoice.pdf,<637688.phish@example.com>,198.51.208.37,phishing
+2025-10-06T06:33:44Z,email:logs,bob@example.com,user15@victimcorp.com,Lunch plans,https://www.dropbox.com/s/real-file,,<576566.normal@example.com>,203.0.27.151,benign
+2025-10-06T06:26:44Z,email:logs,bob@example.com,user4@victimcorp.com,Team meeting notes,https://www.dropbox.com/s/real-file,report.docx,<717961.normal@example.com>,203.0.61.253,benign
+2025-10-06T06:19:44Z,email:logs,alice@example.com,user1@victimcorp.com,Weekly report,https://accounts.google.com,report.docx,<113490.normal@example.com>,203.0.205.100,benign
+2025-10-06T06:12:44Z,email:logs,alice@example.com,user20@victimcorp.com,Lunch plans,https://company.internal/docs,,<980645.normal@example.com>,203.0.219.134,benign
+2025-10-06T06:05:44Z,email:logs,bob@example.com,user17@victimcorp.com,Weekly report,https://www.dropbox.com/s/real-file,inv_2025.pdf,<236906.normal@example.com>,203.0.69.57,benign
+2025-10-06T05:58:44Z,email:logs,no-reply1@spoofed-bank.com,user1@victimcorp.com,Payment failed — update billing info,http://free-gift.example.info,,<106206.phish@example.com>,198.51.74.227,phishing
+2025-10-06T05:51:44Z,email:logs,bob@example.com,user13@victimcorp.com,Team meeting notes,,inv_2025.pdf,<556088.normal@example.com>,203.0.26.5,benign
+2025-10-06T05:44:44Z,email:logs,alice@example.com,user13@victimcorp.com,Lunch plans,https://www.dropbox.com/s/real-file,report.docx,<407870.normal@example.com>,203.0.113.217,benign
+2025-10-06T05:37:44Z,email:logs,carol@example.com,user17@victimcorp.com,Invoice from ACME Corp,,,<664425.normal@example.com>,203.0.71.15,benign
+2025-10-06T05:30:44Z,email:logs,bob@example.com,user6@victimcorp.com,Lunch plans,https://www.dropbox.com/s/real-file,,<168901.normal@example.com>,203.0.38.140,benign
+2025-10-06T05:23:44Z,email:logs,alice@example.com,user15@victimcorp.com,Lunch plans,,inv_2025.pdf,<556118.normal@example.com>,203.0.43.30,benign
+2025-10-06T05:16:44Z,email:logs,no-reply3@spoofed-drive.com,user10@victimcorp.com,You received a shared document,http://free-gift.example.info,payment_request.docx,<193380.phish@example.com>,198.51.213.46,phishing
+2025-10-06T05:09:44Z,email:logs,carol@example.com,user1@victimcorp.com,Weekly report,https://www.dropbox.com/s/real-file,inv_2025.pdf,<421511.normal@example.com>,203.0.168.148,benign
+2025-10-06T05:02:44Z,email:logs,carol@example.com,user9@victimcorp.com,Weekly report,,report.docx,<629893.normal@example.com>,203.0.31.139,benign
+2025-10-06T04:55:44Z,email:logs,bob@example.com,user11@victimcorp.com,Team meeting notes,https://www.dropbox.com/s/real-file,report.docx,<734486.normal@example.com>,203.0.134.87,benign
+2025-10-06T04:48:44Z,email:logs,alice@example.com,user17@victimcorp.com,File shared: Project plan,,inv_2025.pdf,<352803.normal@example.com>,203.0.198.111,benign
+2025-10-06T04:41:44Z,email:logs,alice@example.com,user6@victimcorp.com,File shared: Project plan,,,<673306.normal@example.com>,203.0.125.131,benign
+2025-10-06T04:34:44Z,email:logs,no-reply18@spoofed-drive.com,user19@victimcorp.com,"Your mailbox is full, click to upgrade",http://free-gift.example.info,invoice.pdf,<385587.phish@example.com>,198.51.22.111,phishing
+2025-10-06T04:27:44Z,email:logs,alice@example.com,user9@victimcorp.com,Team meeting notes,,report.docx,<167161.normal@example.com>,203.0.101.59,benign
+2025-10-06T04:20:44Z,email:logs,carol@example.com,user13@victimcorp.com,Team meeting notes,,report.docx,<935598.normal@example.com>,203.0.187.173,benign
+2025-10-06T04:13:44Z,email:logs,alice@example.com,user13@victimcorp.com,Weekly report,https://www.dropbox.com/s/real-file,,<222851.normal@example.com>,203.0.134.79,benign
+2025-10-06T04:06:44Z,email:logs,carol@example.com,user2@victimcorp.com,Invoice from ACME Corp,https://company.internal/docs,,<784054.normal@example.com>,203.0.68.230,benign
+2025-10-06T03:59:44Z,email:logs,carol@example.com,user4@victimcorp.com,File shared: Project plan,https://company.internal/docs,,<688617.normal@example.com>,203.0.106.104,benign
+2025-10-06T03:52:44Z,email:logs,no-reply27@spoofed-service.com,user3@victimcorp.com,You received a shared document,http://docs-share.drive-suspicious.com,invoice.pdf,<583979.phish@example.com>,198.51.239.61,phishing
+2025-10-06T03:45:44Z,email:logs,alice@example.com,user8@victimcorp.com,Lunch plans,,report.docx,<176041.normal@example.com>,203.0.94.227,benign
+2025-10-06T03:38:44Z,email:logs,carol@example.com,user1@victimcorp.com,File shared: Project plan,https://www.dropbox.com/s/real-file,,<114669.normal@example.com>,203.0.77.19,benign
+2025-10-06T03:31:44Z,email:logs,carol@example.com,user14@victimcorp.com,Weekly report,,report.docx,<214534.normal@example.com>,203.0.77.245,benign
+2025-10-06T03:24:44Z,email:logs,carol@example.com,user16@victimcorp.com,Weekly report,,inv_2025.pdf,<629260.normal@example.com>,203.0.159.133,benign
+2025-10-06T03:17:44Z,email:logs,carol@example.com,user19@victimcorp.com,Invoice from ACME Corp,https://www.dropbox.com/s/real-file,inv_2025.pdf,<590601.normal@example.com>,203.0.190.195,benign
+2025-10-06T03:10:44Z,email:logs,no-reply4@spoofed-bank.com,user16@victimcorp.com,Urgent: Verify your account now,http://secure-login.example.com,,<838121.phish@example.com>,198.51.147.244,phishing
+2025-10-06T03:03:44Z,email:logs,bob@example.com,user16@victimcorp.com,Lunch plans,https://www.dropbox.com/s/real-file,,<125078.normal@example.com>,203.0.96.85,benign
+2025-10-06T02:56:44Z,email:logs,bob@example.com,user9@victimcorp.com,Lunch plans,https://accounts.google.com,inv_2025.pdf,<968102.normal@example.com>,203.0.110.76,benign
+2025-10-06T02:49:44Z,email:logs,bob@example.com,user16@victimcorp.com,Weekly report,https://company.internal/docs,,<829681.normal@example.com>,203.0.226.85,benign
+2025-10-06T02:42:44Z,email:logs,alice@example.com,user20@victimcorp.com,Lunch plans,,inv_2025.pdf,<861620.normal@example.com>,203.0.219.78,benign
+2025-10-06T02:35:44Z,email:logs,bob@example.com,user5@victimcorp.com,File shared: Project plan,,inv_2025.pdf,<184972.normal@example.com>,203.0.204.206,benign
+2025-10-06T02:28:44Z,email:logs,no-reply47@spoofed-service.com,user1@victimcorp.com,Invoice #3492 attached — immediate action required,http://bank-secure-login.example.org,,<766081.phish@example.com>,198.51.200.148,phishing
+2025-10-06T02:21:44Z,email:logs,bob@example.com,user13@victimcorp.com,Lunch plans,https://www.dropbox.com/s/real-file,report.docx,<802001.normal@example.com>,203.0.248.21,benign
+2025-10-06T02:14:44Z,email:logs,alice@example.com,user7@victimcorp.com,Weekly report,https://company.internal/docs,report.docx,<847723.normal@example.com>,203.0.239.248,benign
+2025-10-06T02:07:44Z,email:logs,alice@example.com,user5@victimcorp.com,Team meeting notes,https://company.internal/docs,report.docx,<817213.normal@example.com>,203.0.153.190,benign
